@@ -1,19 +1,22 @@
-<template>
+<template> <!--Here is a javascript that says getElementById?-->
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>To-Do List</h1>
+    <ul>
+      <li>
+        <to-do-item label="My ToDo Item" :done="true"></to-do-item>
+      </li> <!--rendering component-->
+    </ul>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
+import ToDoItem from "./components/ToDoItem.vue";
+export default { //default export
   name: 'App',
-  components: {
-    HelloWorld
+  components: { //component opbject
+    ToDoItem //register component
   }
-}
+};
 </script>
 
 <style>
@@ -24,5 +27,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+ul {
+  list-style-type: none;
 }
 </style>
