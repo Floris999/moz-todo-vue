@@ -1,11 +1,12 @@
 <template>
     <div>
-        <input type="checkbox" id="todo-item" :checked="IsDone"/>
-        <label for="todo-item">{{label}}</label><!--label prop input-->
+        <input type="checkbox" :id="id" :checked="isDone"/>
+        <label :for="id">{{label}}</label><!--label prop input-->
     </div>
 
 </template>
 <script>
+import uniqueId from 'lodash.uniqueid';
     export default {
         props: {
             label: {
@@ -19,7 +20,8 @@
         },
         data() {
             return {
-                isDone: this.done // returning results of prop done/or every prop? (not sure yet)
+                isDone: this.done, // returning results of prop done/or every prop? (not sure yet)
+                id: uniqueId("todo-")
             };
         }
     };
