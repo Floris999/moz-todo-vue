@@ -16,6 +16,10 @@ import uniqueId from 'lodash.uniqueid';
             done: {
                 default: false,
                 type: Boolean
+            },
+            id: {
+                required: true,
+                type: String
             }
         },
         data() {
