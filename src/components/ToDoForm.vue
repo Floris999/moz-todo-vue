@@ -1,8 +1,6 @@
 <template>
     <form v-on:submit.prevent="onSubmit">
-        <label for="new-todo-input">
-        What needs to be done?
-        </label>
+        <label for="new-todo-input">What needs to be done?</label><br>
         <input type="text" id="new-todo-input" name="new-todo" autocomplete="off" v-model.trim.lazy="label"/>
         <button type="submit">Add</button>
     </form>
