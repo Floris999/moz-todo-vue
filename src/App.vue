@@ -26,7 +26,10 @@ export default {
   data() {
     return {
       ToDoItems: [
-        { id: 1, label: "Learn to code", done: false },
+        { id: 1, 
+          label: "Learn to code", 
+          done: false 
+        },
         {
           id: 2,
           label: "Set up basic Vue project",
@@ -46,8 +49,8 @@ export default {
     };
   },
   methods: {
-    addToDo() {
-      console.log("To-do added: ", toDoLabel);
+    addToDo(toDoLabel) {
+      console.log("To-do added: ", toDoLabel); //task here is to add console.log of input that is added in label ,toDoLabel
     }
   }
 };
