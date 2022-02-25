@@ -26,22 +26,22 @@ export default {
   data() {
     return {
       ToDoItems: [
-        { id: 1, 
+        { 
           label: "Learn to code", 
           done: false 
         },
         {
-          id: 2,
+          
           label: "Set up basic Vue project",
           done: true,
         },
         {
-          id: 3,
+          
           label: "Understand this data prop topic",
           done: false,
         },
         {
-          id: 4,
+          
           label: "Show Erik-Jan that i master Vue.js",
           done: false,
         },

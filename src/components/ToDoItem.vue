@@ -25,7 +25,7 @@ import uniqueId from 'lodash.uniqueid';
         data() {
             return {
                 isDone: this.done, // returning results of prop done/or every prop? (not sure yet)
-                num: uniqueId("todo-") //changed ID to num because of duplicate error
+                id: uniqueId("todo-") //changed ID to num because of duplicate error
             };
         }
     };
