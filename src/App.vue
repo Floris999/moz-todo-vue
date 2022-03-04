@@ -17,13 +17,15 @@
 import ToDoItem from "./components/ToDoItem.vue";
 import ToDoForm from "./components/ToDoForm.vue";
 import uniqueId from 'lodash.uniqueid';
+import ToDoItemEditForm from "./ToDoItemEditForm";
 export default {
   //default export
   name: "App",
   components: {
     //component object
     ToDoItem, //register component
-    ToDoForm
+    ToDoForm,
+    ToDoItemEditForm
   },
   data() {
     return {
