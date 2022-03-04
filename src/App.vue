@@ -2,7 +2,8 @@
   <!--Here is a javascript that says getElementById?-->
   <div id="app">
     <h1>To-Do List</h1>
-    <to-do-form @todo-added="addToDo"></to-do-form>
+    <to-do-form @todo-added="addToDo" @checkbox-changed="updateDoneStatus(item.id)"></to-do-form>
+    <h2 id="list-summary">{{listSummary}}</h2>
     <ul class="stack-large">
       <li v-for="item in ToDoItems" :key="item.id">
         <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
@@ -54,8 +55,18 @@ export default {
     addToDo(toDoLabel) {
       //console.log("To-do added: ", toDoLabel); //task here is to add console.log of input that is added in label ,toDoLabel
       this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
-    }
+    },
+    updateDoneStatus(toDoId) {
+      const toDoToUpdate = this.ToDoItems.find(item => item.id === toDoId)
+      toDoToUpdate.done = !toDoToUpdate.done
+}
+  },
+  computed: {
+    listSummary() {
+      const numberFinishedItems = this.ToDoItems.filter(item =>item.done).length
+      return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`
   }
+}
 };
 </script>
 
