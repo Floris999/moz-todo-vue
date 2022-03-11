@@ -36,7 +36,7 @@ export default {
         {
           id: uniqueId('todo-'),
           label: "Set up basic Vue project",
-          done: true,
+          done: false,
         },
         {
           id: uniqueId('todo-'),
