@@ -71,4 +71,3 @@ form > * {
   flex: 0 0 100%;
 }
 </style>
-Copy to Clipboard
